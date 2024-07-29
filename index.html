@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table form using js</title>
+     <style>
+        table tr{
+            cursor: pointer;transition: all .25s ease-in-out ;
+        }
+        table tr:hover{background-color: pink;}
+    </style> 
+</head>
+<body>
+    First Name:<input type="text" name="fname" id="fname"><br><br>
+    Last Name:<input type="text" name="lname" id="lname"><br><br>
+    Age:<input type="text" name="age" id="age"><br><br>
+    <button onclick="sandhya();">submit</button><br><br>
+    <table id="table" border="1">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+        </tr>
+    </table>
+   
+
+    <script>
+    function sandhya(){
+        
+        var table = document.getElementById("table"),
+        newRow = table.insertRow(table.length),
+        cell1 = newRow.insertCell(0),
+        cell2 = newRow.insertCell(1),
+        cell3 = newRow.insertCell(2),
+        FirstName = document.getElementById("fname").value,
+        LastName =document.getElementById("lname").value,
+        Age = document.getElementById("age").value;
+
+
+        cell1.innerHTML = FirstName;
+        cell2.innerHTML = LastName;
+        cell3.innerHTML = Age;
+    }  
+    
+    </script>
+</body>
+</html> 
+
